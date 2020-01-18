@@ -2,7 +2,10 @@
   "Functions to convert from one representation to another."
   (:require [hickory.render :as render]
             [hickory.core :as core]
-            [hickory.utils :as utils]))
+            [hickory.utils :as utils])
+  (:gen-class))
+
+(set! *warn-on-reflection* true)
 
 (defn hiccup-to-hickory
   "Given a sequence of hiccup forms representing a full document,

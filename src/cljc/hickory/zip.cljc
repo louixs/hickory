@@ -1,5 +1,8 @@
 (ns hickory.zip
-  (:require [clojure.zip :as zip]))
+  (:require [clojure.zip :as zip])
+  (:gen-class))
+
+(set! *warn-on-reflection* true)
 
 ;;
 ;; Hickory

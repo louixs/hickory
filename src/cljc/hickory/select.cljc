@@ -7,7 +7,10 @@
             [hickory.zip :as hzip])
   #?(:clj
      (:import clojure.lang.IFn))
-  (:refer-clojure :exclude [and or not class]))
+  (:refer-clojure :exclude [and or not class])
+  (:gen-class))
+
+(set! *warn-on-reflection* true)
 
 ;;
 ;; Utilities

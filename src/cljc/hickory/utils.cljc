@@ -3,7 +3,10 @@
   (:require [clojure.string :as string]
     #?(:clj
             [quoin.text :as qt]
-       :cljs [goog.string :as gstring])))
+       :cljs [goog.string :as gstring]))
+  (:gen-class))
+
+(set! *warn-on-reflection* true)
 
 ;;
 ;; Data

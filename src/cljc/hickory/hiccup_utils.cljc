@@ -1,6 +1,9 @@
 (ns hickory.hiccup-utils
   "Utilities for working with hiccup forms."
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str])
+  (:gen-class))
+
+(set! *warn-on-reflection* true)
 
 (defn- first-idx
   "Given two possible indexes, returns the lesser that is not -1. If both

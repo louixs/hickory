@@ -1,7 +1,10 @@
 (ns hickory.render
   (:require [hickory.hiccup-utils :as hu]
             [hickory.utils :as utils]
-            [clojure.string :as str]))
+            [clojure.string :as str])
+  (:gen-class))
+
+(set! *warn-on-reflection* true)
 
 ;;
 ;; Hickory to HTML
