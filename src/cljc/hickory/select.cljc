@@ -5,8 +5,8 @@
   (:require [clojure.zip :as zip]
             [clojure.string :as string]
             [hickory.zip :as hzip])
-  #?(:clj
-     (:import clojure.lang.IFn))
+  ;; #?(:clj
+  ;;    (:import clojure.lang.IFn))
   (:refer-clojure :exclude [and or not class])
   (:gen-class))
 
@@ -481,7 +481,8 @@
   ;; build the selector list into an array for quicker access. We'll do it
   ;; immediately and then closure-capture the result, so it does not get
   ;; redone every time the selector is called.
-  (let [selectors (into-array IFn selectors)]
+  (let [;;selectors (into-array selectors)
+        ]
     (fn [hzip-loc]
       (loop [curr-loc hzip-loc
              idx 0]
@@ -556,7 +557,8 @@
   ;; 2) therefore, we need to make sure the first selector matches the loc under
   ;;    consideration, and not merely one that is farther along the movement
   ;;    direction.
-  (let [selectors (into-array IFn selectors)]
+  (let [;;selectors (into-array IFn selectors)
+        ]
     (fn [hzip-loc]
       ;; First need to check that the first selector matches the current loc,
       ;; or else we can return nil immediately.
