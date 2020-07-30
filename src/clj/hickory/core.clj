@@ -5,7 +5,8 @@
   (:import [org.jsoup Jsoup]
            [org.jsoup.nodes Attribute Attributes Comment DataNode Document
             DocumentType Element Node TextNode XmlDeclaration]
-           [org.jsoup.parser Tag Parser]))
+           [org.jsoup.parser Tag Parser])
+  (:gen-class))
 
 (defn- end-or-recur [as-fn loc data & [skip-child?]]
   (let [new-loc (-> loc (zip/replace data) zip/next (cond-> skip-child? zip/next))]
